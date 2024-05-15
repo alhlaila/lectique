@@ -1,0 +1,863 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+    
+    
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    
+    .reveal{
+        position: relative;
+        transform: translateY(120px);
+        opacity: 0;
+        transition: 0.5s all ease;
+      }
+      .reveal.active{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    
+    
+    
+    .header{
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #show{
+        
+        transition: background-color 0.4s ease;
+    }
+    
+        .logo {
+            display: flex;
+            justify-content: start;
+        }
+    
+        .logo img{
+            width: 115px;
+            height: 115px;
+            margin-left: 110px;
+        }
+    
+    
+    
+    .pages{
+        display: flex;
+    }
+    
+    
+    .pages a{
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 550;
+        margin-right: 60px;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+    }
+    
+    
+    .social{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 110px;
+    }
+    
+    .social img{
+        height: 25px;
+        width: 25px;
+        margin-right: 15px;
+        cursor: pointer;
+        padding: 5px 5px;
+    }
+    
+    .social img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    
+    #Top{
+        position: fixed;
+        top: 85%;
+        right: 5%;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    #Top img{
+        text-decoration: none;
+        width: 25px;
+        height: 25px;
+        padding: 10px 10px;
+        background-color: #F6E5CF;
+        border: solid 1px;
+        border-radius: 30px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    
+    
+    section{
+        margin-bottom: 50px;
+        height: 700px;
+    }
+
+    section div h1{
+        position: absolute;
+        top: 70%;
+        left: 23%;
+        font-size: 90px;
+        color: rgb(104, 31, 108);
+        letter-spacing: 8px;
+    }
+
+    section div h2{
+        position: absolute;
+        top: 70%;
+        left: 25%;
+        font-size: 90px;
+        color: black;
+        letter-spacing: 10px;
+    }
+    
+    .img img{
+        position: relative;
+        width: 85%;
+        height: 60%;
+        left: 7%;
+        margin-top: 5%;
+    }
+
+    .searching{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .search-bar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        background: linear-gradient(to right bottom, #F6E5CF -40% , #fff 110%);
+        border-radius: 60px;
+        padding: 10px;
+        box-shadow:inset 2px 1px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 80px;
+    }
+
+    .search-bar input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-left: 25px;
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+    
+    .search-bar button{
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background-color: transparent;
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 80px;
+    }
+
+    .search-bar img:hover{
+        opacity: 60%;
+    }
+    .search-bar img{
+        border-radius: 60px;
+        padding: 10px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .classes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    
+    .classes div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        background-color: #d8d6d6;
+        border-radius: 40px;
+        border: solid 2.3px;
+        cursor: pointer;
+    }
+
+    .classes div:hover{
+        border: #6e6e6e solid 2px;
+        color: #535252;
+    }
+
+    .classes div a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pages a:hover{
+        color: black;
+        border-radius: 2px;
+        letter-spacing: 3px;
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+        transition: 0.2s;
+    }
+    
+    .head{
+        position: relative;
+        margin-left: 17.8%;
+        margin-top: 5%;
+        border-bottom: solid 2px;
+        margin-bottom: 5%;
+        padding-bottom: 5px;
+        width: 65%;
+        display:block;
+    }
+
+    .head-2{
+        position: relative;
+        margin-left: 17.8%;
+        margin-top: 5%;
+        border-bottom: solid 2px;
+        margin-bottom: 5%;
+        padding-bottom: 5px;
+        width: 65%;
+        display: none;
+    }
+
+   
+
+    .blocks{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .blocks section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .blocks section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    .blocks section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    .blocks section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    .blocks section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    .blocks section:hover{
+        transform: translateY(-10px);
+    }
+
+    .blocks section a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+
+
+
+    #norse{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #norse section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #norse section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #norse section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #norse section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #norse section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #norse section:hover{
+        transform: translateY(-10px);
+    }
+
+    #norse section a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #egyptian{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #egyptian section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #egyptian section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #egyptian section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #egyptian section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #egyptian section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #egyptian section:hover{
+        transform: translateY(-10px);
+    }
+
+    #egyptian section a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+    #roman{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #roman section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #roman section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #egyptian section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #roman section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #roman section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #roman section:hover{
+        transform: translateY(-10px);
+    }
+
+    #roman section a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+    #arab{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #arab section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #arab section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #arab section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #arab section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #arab section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #arab section:hover{
+        transform: translateY(-10px);
+    }
+
+    #arab section a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* new section*/
+
+    #chinese{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #chinese section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #chinese section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #chinese section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #chinese section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #chinese section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #chinese section:hover{
+        transform: translateY(-10px);
+    }
+
+    #chinese section a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* new section*/
+
+    #japanese{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #japanese section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #japanese section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #japanese section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #japanese section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #japanese section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #japanese section:hover{
+        transform: translateY(-10px);
+    }
+
+    #japanese section a{
+        text-decoration: none;
+        color: black;
+    }
+    /* new section*/
+
+    #hindu{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #hindu section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #hindu section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #hindu section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #hindu section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #hindu section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #hindu section:hover{
+        transform: translateY(-10px);
+    }
+
+    #hindu section a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* new section*/
+
+    #african{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #african section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #african section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #african section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #african section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #african section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #african section:hover{
+        transform: translateY(-10px);
+    }
+
+    #african section a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* new section*/
+
+    #celtic{
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-gap: 40px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #celtic section{
+        position: relative;
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #celtic section h1{
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -0.1%;
+    }
+    
+    #celtic section img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+        left: 19%;
+    }
+    
+    #celtic section div {
+        position: absolute;
+        width: 300px;
+        height: 125px;
+        font-size: 21px;
+        line-height: 30px;
+        margin-top: 15%;
+        background: linear-gradient(to right bottom, #F6E5CF -120% , #fff 100%);
+        border-top: solid 2px;
+    }
+    
+    #celtic section p{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 9px;
+    }
+    #celtic section:hover{
+        transform: translateY(-10px);
+    }
+
+    #celtic section a{
+        text-decoration: none;
+        color: black;
+    }
