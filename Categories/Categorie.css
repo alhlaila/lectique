@@ -94,12 +94,12 @@ header {
 .art h4, .books h4, .sub-cls-art {
     display: flex;
     justify-content: space-around;
-    font-size: 150px;
+    font-size: 350px;
     margin-bottom: 50px;
 }
 
 .sub-cls-art h5 {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-left: 5vw;
     border-bottom: #451c0d solid 2px;
     padding-bottom: 5px;
