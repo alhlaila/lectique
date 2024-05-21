@@ -94,7 +94,7 @@ header {
 .art h4, .books h4, .sub-cls-art {
     display: flex;
     justify-content: space-around;
-    font-size: 350px;
+    font-size: 150px;
     margin-bottom: 50px;
 }
 
