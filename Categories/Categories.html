@@ -6,6 +6,233 @@
     <title>Categories</title>
     <link rel="stylesheet" href="Categorie.css">
     <link rel="shortcut icon" type="image/x-icon" href="../Logo/logo 3.png">
+    <style>
+        
+
+header {
+    position: fixed;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-right: #000 solid 2px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: auto;
+    margin-right: 250px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.attributes a {
+    margin-left: 50px;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: #000 solid 1.5px;
+    transition: 0.3s;
+}
+
+
+
+
+.attributes a:hover {
+    
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 20px;
+    border-bottom: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.attributes {
+    display: none;
+}
+
+.hamburger-menu {
+    display: block;
+}
+
+.hamburger-menu button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hamburger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.hamburger-menu ul li {
+    margin: 20px;
+    
+}
+
+.hamburger-menu ul li a {
+    color: #000;
+    text-decoration: none;
+
+}
+.carousel-container {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 20px;
+    
+    
+    margin-top: 100px;
+}
+
+h1 {
+    margin-left: 5%;
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.card a{
+    color: #000;
+    text-decoration: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid transparent;
+}
+
+.card-content {
+    padding: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: #000 solid 1.5px;
+    width: 80%;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 0.8em;
+    border: #000 solid 0.5px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    border: #000 solid 0.3px;
+    right: 20px;
+    font-size: 1.5em;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.view-all {
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5%;
+}
+
+.view-all:hover {
+    background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+    </style>
 </head>
 <body>
 
