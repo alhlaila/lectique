@@ -6,6 +6,491 @@
     <title>Lectique</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="Logo/logo 3.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Josefin+Sans:wght@600&family=Montserrat+Subrayada&family=Noto+Serif:wght@600&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f4e5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-right: #000 solid 2px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: auto;
+    margin-right: 250px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.attributes a {
+    margin-left: 50px;
+    color: #000;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: #000 solid 1.5px;
+    transition: 0.3s;
+}
+
+
+
+
+.attributes a:hover {
+    
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 20px;
+    border-bottom: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.attributes {
+    display: none;
+}
+
+.hamburger-menu {
+    display: block;
+}
+
+.hamburger-menu button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hamburger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.hamburger-menu ul li {
+    margin: 20px;
+    
+}
+
+.hamburger-menu ul li a {
+    color: #000;
+    text-decoration: none;
+
+}
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.title div {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.title .vertical {
+    
+    color: #333;
+}
+
+.title .horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.title .horizontal span {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #778899;
+}
+
+
+
+
+.image-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 750px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.discover-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.discover-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    
+
+    .content {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        align-items: center;
+    }
+
+    
+
+    .carousel-slide, .carousel-slide1 {
+        min-width: 100px;
+    
+    }
+
+    .carousel-slide p, .carousel-slide1 p {
+        font-size: 1em;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header2 {
+    text-align: center;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #000;
+    margin-bottom: 50px;
+}
+
+.carousel-container{
+    width: 600px;
+}
+
+}
+
+.header2 {
+    text-align: center;
+  font-size: 2rem;
+    padding: 0px 150px;
+    border-bottom: 3px solid #000;
+    margin-bottom: 50px;
+    
+}
+
+.carousel {
+    text-align: center;
+    padding: 5px;
+    border-left: #5d2510 solid 6px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.carousel h2 {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.carousel-track, .carousel-track1 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 45%;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+
+.carousel-slide1{
+    min-width: 35%;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 40px;
+    border: #5d2510 solid 2px;
+}
+
+.carousel-slide1 img{
+    width: 80%;
+    border-radius: 40px;
+    border: #5d2510 solid 2px;
+}
+
+.carousel-slide p, .carousel-slide1 p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev, .carousel-button.prev1 {
+    left: 10px;
+}
+
+.carousel-button.next, .carousel-button.next1 {
+    right: 10px;
+}
+
+
+
+.socials {
+    text-align: center;
+    padding: 0 80px;
+    margin-top: 40px;
+    border-top: 3px solid #000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-icon {
+    text-align: center;
+}
+
+.social-icon img {
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    position: relative;
+    border-bottom: #000 solid 2px;
+    padding-bottom: 5px;
+    width: 50%;
+    transition: 0.3s;
+}
+
+.social-icon p a{
+    text-decoration: none;
+    color: #000;
+}
+
+.social-icon p:hover{
+    width: 100%;
+}
+
+
+
+.newsletter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f8f4e5;
+}
+
+.newsletter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscribe-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+}
+
+.highlighted-letter {
+    font-size: 4em;
+    background-color: #a1a17a;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
+
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', serif;
+}
+
+.text-lines p {
+    margin: 0;
+}
+
+.fl::first-letter{
+    font-size: 3em;
+    background-color: #a1a17a;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: #4a0a0a;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #4a0a0a;
+    margin-right: 10px;
+    background-color: #f8f4e5;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px solid #4a0a0a;
+    background-color: #e8e3d3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #d4c9b0;
+}
+
+.footer {
+    background-color: #5d6040;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-form {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .highlighted-letter {
+        font-size: 3em;
+    }
+
+    .text-lines {
+        font-size: 1.5em;
+    }
+}
+
+
+    </style>
 </head>
 <body>
     <header id="show">
