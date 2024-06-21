@@ -21,12 +21,10 @@ header{
     height: auto;
     margin-right: 250px;
 }
-
 .logo img{
     width: 100%;
     height: auto;
 }
-
 .attributes a{
     margin-left: 50px;
     color: #000;
@@ -36,32 +34,22 @@ header{
     border-bottom: #000 solid 1.5px;
     transition: 0.3s;
 }
-
-
-
-
 .attributes a:hover{
     padding: 10px 20px;
     transition: 0.3s;
     border-radius: 20px;
     border-bottom: none;
 }
-
 .hamburger-menu{
     display: none;
 }
-
 @media only screen and (max-width: 600px) {
-
-
 .attributes{
     display: none;
 }
-
 .hamburger-menu{
     display: block;
 }
-
 .hamburger-menu button{
     background: none;
     border: none;
@@ -69,7 +57,6 @@ header{
     cursor: pointer;
     font-size: 20px;
 }
-
 .hamburger-menu ul{
     list-style-type: none;
     padding: 0;
@@ -78,11 +65,9 @@ header{
     text-align: center;
     align-items: center;
 }
-
 .hamburger-menu ul li{
     margin: 20px;
 }
-
 .hamburger-menu ul li a{
     color: #000;
     text-decoration: none;
@@ -94,7 +79,6 @@ header{
     position: relative;
   }
 }
-
 body{
     font-family: Arial, sans-serif;
     background-color: #fdf6e3;
@@ -102,28 +86,22 @@ body{
     padding: 0;
     min-height: 100vh;
 }
-
 .container{
     max-width: 1400px;
     padding: 20px;
-    
-    
     margin-top: 100px;
 }
-
 h1{
     margin-left: 5%;
     font-size: 5em;
     margin-bottom: 20px;
 }
-
 .card-container{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
-
 .card{
     background: #fff;
     border-radius: 15px;
@@ -134,43 +112,36 @@ h1{
     flex-direction: column;
     max-width: 300px;
 }
-
 .card a{
     color: #000;
     text-decoration: none;
 }
-
 .card img{
     width: 100%;
     height: auto;
     border-bottom: 5px solid transparent;
 }
-
 .card-content{
     padding: 20px;
     position: relative;
     text-align: left;
 }
-
 .card-content h2{
     font-size: 1.5em;
     margin-bottom: 10px;
     border-bottom: #000 solid 1.5px;
     width: 80%;
 }
-
 .card-content p{
     margin-bottom: 20px;
     color: #555;
 }
-
 .tags{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
 }
-
 .tag{
     background-color: #eee;
     border-radius: 5px;
@@ -178,7 +149,6 @@ h1{
     font-size: 0.8em;
     border: #000 solid 0.5px;
 }
-
 .arrow{
     position: absolute;
     bottom: 20px;
@@ -194,7 +164,6 @@ h1{
     align-items: center;
     cursor: pointer;
 }
-
 .view-all{
     background-color: #000;
     color: #fff;
@@ -206,17 +175,12 @@ h1{
     transition: background-color 0.3s;
     margin-left: 5%;
 }
-
 .view-all:hover{
     background-color: #333;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .card {
         flex: 1 1 100%;
     }
 }
-
-
-
