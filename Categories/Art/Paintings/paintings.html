@@ -5,7 +5,344 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paintings</title>
     <link rel="stylesheet" href="">
-  
+  <style>
+      
+        
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9f9f9;
+color: #333;
+}
+
+.reveal {
+position: relative;
+transform: translateY(120px);
+opacity: 0;
+transition: 0.5s all ease;
+}
+
+.reveal.active {
+transform: translateY(0);
+opacity: 1;
+}
+
+header {
+position: fixed;
+top: 0%;
+height: 50px;
+width: 100%;
+background-color: transparent;
+color: #fff;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+border-right: #000 solid 2px;
+}
+.logo{
+display: flex;
+justify-content: center;
+width: 70px;
+height: auto;
+margin-right: 250px;
+}
+
+.logo img {
+width: 100%;
+height: auto;
+}
+
+.attributes a {
+margin-left: 50px;
+color: #000;
+font-size: 22px;
+text-decoration: none;
+padding: 10px 20px;
+border-bottom: #000 solid 1.5px;
+transition: 0.3s;
+}
+
+
+
+
+.attributes a:hover {
+
+padding: 10px 20px;
+transition: 0.3s;
+border-radius: 20px;
+border-bottom: none;
+}
+
+.hamburger-menu {
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.attributes {
+display: none;
+}
+
+.hamburger-menu {
+display: block;
+}
+
+.hamburger-menu button {
+background: none;
+border: none;
+color: #000;
+cursor: pointer;
+font-size: 20px;
+}
+
+.hamburger-menu ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: none;
+text-align: center;
+align-items: center;
+}
+
+.hamburger-menu ul li {
+margin: 20px;
+
+}
+
+.hamburger-menu ul li a {
+color: #000;
+text-decoration: none;
+
+}
+.carousel-container {
+width: 100%;
+height: 700px;
+overflow: hidden;
+position: relative;
+}
+}
+
+h1, h2, h3 {
+font-family: 'Georgia', serif;
+margin: 0;
+}
+
+.shero-section, .hero-section {
+opacity: 0;
+transition: opacity 1s ease;
+}
+
+
+.hero-section.show, .hero-section.show {
+opacity: 1;
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+position: relative;
+color: white;
+}
+
+.hero-section img {
+width: 100%;
+height: 950px;
+}
+
+.hero-text {
+position: absolute;
+top: 50%;
+left: 40%;
+transform: translate(-50%, -50%);
+padding: 20px;
+border-radius: 10px;
+border-left: #cba01e solid 20px;
+}
+
+.hero-text h1 {
+font-size: 7em;
+margin-bottom: 10px;
+color: #cba01e;
+}
+
+.hero-text p {
+font-size: 1.2em;
+width: 50%;
+}
+
+.breaker{
+display: flex;
+justify-content: center;
+font-size: 3.5rem;
+margin-top: 40px;
+margin-bottom:50px ;
+}
+
+.search{
+display: flex;
+justify-content: center;
+padding-bottom: 50px;
+
+}
+
+.box{
+display: flex;
+}
+
+.box img{
+width: 30px;
+}
+
+.input input{
+width: 350px;
+height: 30px;
+border: none;
+border-bottom: #5d2510 solid 2px;
+margin-right: 20px;
+background-color: #f9f9f9;
+outline: none;
+font-size: 1.2rem;
+}
+
+
+
+/* Posts Section */
+.posts-section {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+gap: 20px;
+
+padding: 40px 20px;
+width: 1500px;
+margin-left: 10%;
+justify-content: center;
+}
+
+.post {
+background: white;
+border-radius: 10px;
+height: 550px;
+overflow: hidden;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+transition: 0.3s;
+
+}
+
+.post a{
+text-decoration: none;
+color: #000;
+}
+
+.post img {
+width: 100%;
+height: auto;
+}
+
+
+
+.post:hover{
+    transform: translateY(-10px);
+}
+
+.post-content {
+padding: 20px;
+}
+
+.post-content h2 {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+.post-content p {
+font-size: 1em;
+margin-bottom: 20px;
+}
+
+.read-more {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+display: flex;
+align-items: center;
+}
+
+.read-more span {
+margin-left: 5px;
+transition: margin-left 0.2s;
+}
+
+.read-more:hover span {
+margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.hero-section img {
+width: 100%;
+height: 300px;
+}
+.hero-text {
+width: 90%;
+padding: 10px;
+
+}
+
+.hero-text h1 {
+font-size: 3em;
+margin-left: 18%;
+}
+
+.hero-text p {
+font-size: 0.8em;
+margin-left: 18%;
+}
+
+.posts-section {
+padding: 20px 10px;
+margin-left: 2%;
+}
+
+.posts-section {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px));
+gap: 20px;
+padding: 40px 20px;
+width: 500px;
+justify-content: center;
+margin-left: 10%;
+}
+
+.breaker{
+display: flex;
+justify-content: center;
+font-size: 2.5rem;
+margin-top: 40px;
+margin-bottom:50px ;
+}
+
+
+.input input{
+width: 200px;
+height: 30px;
+border: none;
+border-bottom: #5d2510 solid 2px;
+margin-right: 20px;
+background-color: #f9f9f9;
+outline: none;
+font-size: 1.2rem;
+}
+}
+
+  </style>
     <link rel="shortcut icon" type="image/x-icon" href="../../Logo/logo 3.png">
 </head>
 <body>
