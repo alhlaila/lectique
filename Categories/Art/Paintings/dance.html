@@ -1,15 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The evenT</title>
-    <link rel="stylesheet" href="dance.css">
-    <link rel="shortcut icon" type="image/x-icon" href="Logo/logo 3.png">
-    <script src="java.js" defer ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Page</title>
+  <link rel="stylesheet" href="">
+  <style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f8f4e5;
+color: #333;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#one, #intro, #vt {
+    scroll-margin-top: 150px;
+}
+
+
+
+.reveal {
+position: relative;
+transform: translateY(120px);
+opacity: 0;
+transition: 0.5s all ease;
+}
+
+.reveal.active {
+transform: translateY(0);
+opacity: 1;
+}
+
+header {
+position: fixed;
+top: 0%;
+height: 50px;
+width: 100%;
+background-color: transparent;
+color: #fff;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+border-right: #000 solid 2px;
+}
+.logo{
+display: flex;
+justify-content: center;
+width: 70px;
+height: auto;
+margin-right: 250px;
+}
+
+.logo img {
+width: 100%;
+height: auto;
+}
+
+.attributes a {
+margin-left: 50px;
+color: #000;
+font-size: 22px;
+text-decoration: none;
+padding: 10px 20px;
+border-bottom: #000 solid 1.5px;
+transition: 0.3s;
+}
+
+
+
+
+.attributes a:hover {
+
+padding: 10px 20px;
+transition: 0.3s;
+border-radius: 20px;
+border-bottom: none;
+}
+
+.hamburger-menu {
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.attributes {
+display: none;
+}
+
+.hamburger-menu {
+display: block;
+}
+
+.hamburger-menu button {
+background: none;
+border: none;
+color: #000;
+cursor: pointer;
+font-size: 20px;
+}
+
+.hamburger-menu ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: none;
+text-align: center;
+align-items: center;
+}
+
+.hamburger-menu ul li {
+margin: 20px;
+
+}
+
+.hamburger-menu ul li a {
+color: #000;
+text-decoration: none;
+
+}
+.carousel-container {
+width: 100%;
+height: 700px;
+overflow: hidden;
+position: relative;
+}
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 6vw;
+  font-weight: bold;
+  margin: 0;
+}
+
+.scroll {
+  margin-top: 20px;
+  font-size: 2.5vw;
+  background-color: #333;
+  padding: 10px;
+  color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.image-container {
+  flex: 2;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebar a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover{
+    border-bottom: #4a0a0a solid 2px;
+    padding-bottom: 10px;
+  }
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+  font-size: 1vw;
+}
+
+.about-us {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1vw;
+}
+
+.social a {
+  margin: 10px;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .content h1 {
+    font-size: 6vw;
+  }
+
+  .scroll {
+    font-size: 2vw;
+  }
+
+  .sidebar h2, .sidebar ul li, .about-us {
+    font-size: 3vw;
+  }
+
+  
+
+  .social img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-art {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.section-artist{
+  display: flex;
+  justify-content: space-around ;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius:60px ;
+  padding: 40px;
+}
+
+.text-block1 h2{
+  font-size: 60px;
+}
+
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.section-flat{
+  display: none;
+}
+
+.text-block, .image-block {
+    flex: 1 1 100%;
+    margin: 10px;
+}
+
+.text-block h2, .text-block h3 {
+    margin-bottom: 10px;
+}
+
+.text-block h2{
+  font-size: 3rem;
+}
+
+.image-block img {
+    width: 70%;
+    height: auto;
+    padding-left: 40px;
+}
+
+.text-block p{
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+
+.image-block-flat{
+  display: none;
+}
+
+.image-block-artist{
+  margin-top: 30px;
+}
+
+.image-block-artist img{
+  object-fit:cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.edgar{
+  margin-left: 20px;
+}
+
+blockquote {
+    font-size: 22px;
+    font-style: italic;
+    margin: 30px 0;
+    margin-left: 20px;
+    padding: 10px 20px;
+    line-height: 3rem;
+    border-left: 5px solid #404040;
+}
+
+@media (min-width: 768px) {
+    .text-block, .image-block {
+        flex: 1 1 48%;
+    }
+
+    .section {
+        justify-content: space-between;
+    }
+
+    .video-section .video-block {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-block, .image-block {
+        flex: 1 1 48%;
+    }
+
+    .section {
+        justify-content: space-between;
+    }
+
+    .video-section .video-block {
+        max-width: 70%;
+    }
+}
+
+
+.posts-section {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(360px, 3fr));
+gap: 20px;
+
+padding: 40px 20px;
+
+
+}
+
+.post {
+background: white;
+border-radius: 10px;
+height: 530px;
+overflow: hidden;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+transition: 0.3s;
+margin-bottom: 50px;
+
+border-bottom: #5d2510 solid 2px;
+
+}
+
+.post a{
+text-decoration: none;
+color: #000;
+}
+
+.post img {
+width: 100%;
+height: auto;
+}
+
+
+
+.post:hover{
+    transform: translateY(-10px);
+}
+
+.post-content {
+padding: 20px;
+
+}
+
+.post-content h2 {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+.post-content p {
+font-size: 1.3em;
+margin-bottom: 20px;
+}
+
+.read-more {
+text-decoration: none;
+color: #333;
+border: #5d2510 solid 2px;
+border-radius: 5px;
+width: 35%;
+padding: 10px;
+font-weight: bold;
+display: flex;
+align-items: center;
+}
+
+.read-more span {
+margin-left: 5px;
+transition: margin-left 0.2s;
+}
+
+.read-more:hover span {
+margin-left: 10px;
+}
+
+.socials {
+    text-align: center;
+    padding: 0 80px;
+    margin-top: 40px;
+   
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-icon {
+    text-align: center;
+}
+
+.social-icon img {
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    position: relative;
+    border-bottom: #000 solid 2px;
+    padding-bottom: 5px;
+    width: 50%;
+    transition: 0.3s;
+}
+
+.social-icon p a{
+    text-decoration: none;
+    color: #000;
+}
+
+.social-icon p:hover{
+    width: 100%;
+}
+
+
+
+.newsletter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f8f4e5;
+}
+
+.newsletter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscribe-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+}
+
+.highlighted-letter {
+    font-size: 4em;
+    background-color: #a1a17a;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
+
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', serif;
+}
+
+.text-lines p {
+    margin: 0;
+}
+
+.fl::first-letter{
+    font-size: 3em;
+    background-color: #a1a17a;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: #4a0a0a;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #4a0a0a;
+    margin-right: 10px;
+    background-color: #f8f4e5;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px solid #4a0a0a;
+    background-color: #e8e3d3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #d4c9b0;
+}
+
+.footer {
+    background-color: #5d6040;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-form {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .highlighted-letter {
+        font-size: 3em;
+    }
+
+    .text-lines {
+        font-size: 1.5em;
+    }
+}
+
+
+  </style>
 </head>
 <body>
-    <header>
+    <header id="show">
         <div id="lg" class="logo">
             <a href="#">
                 <img src="../../Logo/logo 3.png" alt="Logo">
@@ -18,455 +643,206 @@
         <nav class="attributes">
             <a href="../../../index.html">Home</a>
             <a href="../../Categories.html">Categories</a>
-            <a href="../../../Contact/">Contact</a>
+            <a href="Contact/">Contact</a>
         </nav>
         <div class="hamburger-menu">
             <button id="btn" onclick="toggleMenu()">☰</button>
             <ul id="menu">
-                <li><a href="../../../index.html">Home</a></li>
-                <li><a href="../../Categories/Categories.html">Categories</a></li>
-                <li><a href="../../../Contact/">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Categories/Categories.html">Categories</a></li>
+                <li><a href="Contact/">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <a id="Top" href="#top"><img src="../../icons/icons8-up-64.png"></a>
+  <div class="container">
+    <div class="content">
+      <h1>THE DANCING CLASS</h1>
+      <p class="scroll">Edgar Degas</p>
+    </div>
+    <div class="image-container">
+      <img src="../Paintings/Art for posts/the-dancing-class.jpg" alt="Art">
+    </div>
 
-    <section class="painting">
-
-        <div class="ptn">
-            <img src="../Paintings/Art for posts/the-dancing-class.jpg">
-        </div>
-
-        <div class="description">
-
-            <div class="title">
-                <h1>The Dancing Class</h1>
-            </div>
-
-            <div class="palette">
-
-                <div class="colors">
-
-                    <div class="c1">
-                        <div></div>
-                        <h4>D1AB83</h4>
-                    </div>
-        
-                    <div class="c2">
-                        <div></div>
-                        <h4>AD957D</h4>
-                    </div>
-        
-                    <div class="c3">
-                        <div></div>
-                        <h4>E4B880</h4>
-                    </div>
-
-                </div>
-                
-                <div class="date">
-                    <h3>1870</h4>
-                </div>
+    <div class="sidebar">
+    
+      <ul>
+        <li><a href="#one">ARTIST</a></li>
+        <li><a href="#intro">INTRODUCTION</a></li>
+        <li><a href="#vt">VISUEAL TOUR</a></li>
+      </ul>
       
-            </div>
-        
+      <div class="social">
+        <a href="#"><img src="facebook-icon-url.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram-icon-url.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+
+    
+
+  <section id="one"  class="section-artist">
+    <div class="image-block-artist">
+      <img src="../Artists/artists/edgar degas/edgar.jpg" alt="Travel Quote">
+  </div>
+
+      <div class="text-block">
+        <h2 class="edgar">EDGAR DEGAS</h2>
+          <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum suscipit voluptatibus repudiandae necessitatibus aut mollitia vitae nulla. Eaque, qui sed?"</blockquote>
+      </div>
+      
+  </section>
+
+    <section id="intro" class="section">
+      <div class="text-block">
+          <h2>Introduction</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Iure sit veritatis earum at quod! Minus doloremque vero molestias eum 
+            reiciendis voluptate consectetur quas cumque cupiditate quidem eius officiis optio quae, 
+            tenetur facere provident consequuntur ullam. Quos a at, 
+            ad repellendus quae aliquam tempore debitis qui vero porro, fugit similique, 
+            necessitatibus earum. Ullam sint recusandae dolorum expedita consequuntur tempora illo, 
+            itaque labore voluptates harum quas placeat necessitatibus ducimus deserunt 
+            ipsa eum dignissimos ratione! Recusandae, numquam rem sed earum, dicta reprehenderit 
+            ducimus blanditiis a accusantium deleniti alias obcaecati error dolore sunt, quia illum 
+            dolores ut! Laborum voluptate, fugit officia nisi doloribus labore?</p>
+      </div>
+  </section>
+
+    <section id="vt" class="section">
+        <div class="text-block">
+            <h2>1. title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat animi nobis mollitia recusandae ea. Laborum, corrupti? Nesciunt, quaerat fugiat ipsum voluptate hic eveniet temporibus dicta. Ipsum expedita atque, odio alias tempore error qui sapiente nobis quis tempora, numquam eos reiciendis autem distinctio? Quo, nihil natus! Laudantium adipisci rem cupiditate numquam?</p>
         </div>
-        
+        <div class="image-block">
+            <img src="../Paintings/The dancing class/another girl wee 2.jpg" alt="Nature Destination">
+        </div>
     </section>
-        
 
-
-        <div class="painter">
-            <div class="whole">
-
-                <div class="brdr">
-                    <img src="../Artists/artists/edgar degas/edgar.jpg">
-                </div> 
-
-                <div class="artist">
-                    <h4>Edgar Degas</h4>
-                    <p>"Watching rehearsals, Degas
-                        had an opportunity of seeing
-                        bodies from all sides in the
-                        most varied attitudes"</p>
-                </div>
-
-            </div>
-
+    <section class="section">
+        <div class="image-block">
+            <img src="../Paintings/The dancing class/hiding girl.jpg" alt="Travel Tips">
         </div>
+        <div class="text-block">
+            <h2>2. title</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto maiores sed fugit excepturi dolorum. Placeat minima quos deleniti suscipit velit dicta commodi numquam rem quis ipsum error nulla omnis magnam, aliquam nobis iusto necessitatibus architecto vitae vel hic, ex ea saepe corporis. Repellat aperiam cumque sapiente quasi voluptatem facere impedit?</p>
+        </div>
+    </section>
 
-       
-            
+    <section class="section-flat">
+        <h2>Adventure & Action in Travel</h2>
+        <div class="text-block">
+            <h3>3. title</h3>
+            <p>Learn how to reduce your carbon footprint while traveling...</p>
+        </div>
+        <div class="image-block-flat">
+            <img src="../Paintings/The dancing class/master.jpg" alt="Eco-friendly Travel">
+        </div>
+    </section>
 
-    
+    <section class="section">
+      <div class="text-block">
+          <h2>4. title</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic explicabo unde eaque rem, odit necessitatibus doloribus, molestias ipsam eligendi facere voluptates nam voluptatem, soluta totam qui quo tempore iste ut sequi repellendus? Delectus alias doloribus amet, ipsa nostrum libero porro consequuntur assumenda pariatur laborum aut blanditiis earum odit tempora impedit?</p>
+      </div>
+      <div class="image-block">
+          <img src="../Paintings/The dancing class/the door.jpg" alt="Nature Destination">
+      </div>
+  </section>
 
-<div class="breaker"><h1 class="head"></h1></div>
+  <section class="section">
+      <div class="image-block">
+          <img src="../Paintings/The dancing class/another girl wee.jpg" alt="Travel Tips">
+      </div>
+      <div class="text-block">
+          <h2>5. title</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quasi similique ex velit exercitationem at cumque aperiam fuga numquam, enim minima eos, ipsam repudiandae vel facere nobis. Optio voluptatum, aliquid, accusantium, id molestiae nesciunt perferendis veniam similique fugiat suscipit libero pariatur nobis possimus nemo reprehenderit illo magni asperiores facilis doloremque?</p>
+      </div>
+  </section>
 
-
-<div class="social-share">
-    <div class="share">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+  <section class="section">
+    <div class="text-block">
+        <h2>Other related articles</h2>
     </div>
+</section>
+
+<main class="posts-section" >
+  <div class="post"><a href="../Paintings/thesea.html">
+      <img src="Posters/caspar.jpg" >
+      <div class="post-content">
+          <h2>Wanderer Above the Sea of Fog<span>-1818-</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, explicabo?...</p>
+          <a href="#" class="read-more">Read more <span>&rarr;</span></a>
+      </div></a>
+  </div>
+  <div class="post"><a href="chess.html">
+      <img src="Posters/chess.jpg" alt="Claire Courtry for ROWSE">
+      <div class="post-content">
+          <h2>Die Schachspieler <span>-1825-</span></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, explicabo?...</p>
+          <a href="#" class="read-more">Read more <span>&rarr;</span></a>
+      </div></a>
+  </div>
+
+  <div class="post"><a href="chair.html">
+    <img src="Posters/van gogh.jpg" alt="Arroventi">
+    <div class="post-content">
+        <h2>Van Gogh's Chair <span>-1888-</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, explicabo?...</p>
+        <a href="#" class="read-more">Read more <span>&rarr;</span></a>
+    </div></a>
 </div>
-    
+ 
+</main>
+  
 
-    <div class="main">
-
-        <div class="principal">
-            <div class="firsty">
-            <div class="headline">
-                <h1>The Dancing Class<span class="c1839">1870</span></h1>
-            </div>
-
-            <div class="first">
-                <div class="article">
-                    <div class="ptn-article">
-                        <img src="../Paintings/Art for posts/the-dancing-class.jpg">
-                    </div>
-            <p>This beautiful painting is full of movement, color, and
-                charming details. From a position in the left-hand
-                corner of the room, just behind the piano, you see the
-                ballerinas of the Paris Opera in rehearsal. This unusual
-                viewpoint helps to create the illusion that you are
-                standing next to Degas, sharing his privileged access to
-                the ballet class. From the piano, you look along the line
-                of dancers right to the back of the room and, like the
-                artist, can observe each ballerina in turn.</p>
-
-                <p>
-                Degas produced several paintings of the young
-                ballerinas of the Paris Opera performing on stage, but
-                he much preferred to depict them in the more relaxed
-                setting of the rehearsal room, where he was a frequent
-                visitor. He spent many hours observing and drawing the
-                dancers as they practiced, and it is this sense of being
-                present during the ballerinas’ daily routine that gives
-                The Dancing Class such an intimate quality.</p>
-                
-                <p>Although the
-                painting appears relaxed and informal, Degas constantly
-                refined and perfected his work once he was back in his
-                studio. In its apparent spontaneity and realism, the
-                painting resembles a snapshot—and Degas was familiar
-                with the latest advances in photography—but its
-                seemingly casual composition was meticulously
-                arranged. X-rays of the painting indicate that some
-                figures were moved from one position to another
-                until Degas achieved the perfect degree of balance
-                and the right atmosphere.</p>
-        
-                    <h1>Respect for the classics</h1>
-
-
-                <p>
-The Dancing Class is a contemporary scene that
-pays homage to the style of the old masters, whose
-techniques and draftsmanship Degas greatly admired.
-As a young man, he spent a great deal of time in the
-Louvre, studying and copying masterpieces by painters
-such as Velázquez. It was not until his late twenties,
-however, that Degas stopped depicting historical or
-mythological themes in his own work and turned his
-attention to painting scenes of 19th-century Parisian
-society, from horse racing to theater and ballet. </p>
-
-<p>In emulating the style of great classical works but
-applying it to less elevated subjects, such as young
-girls practicing their dancing skills, Degas was breaking
-with convention and his work came under strong
-criticism from the French art establishment.</p>
-<p>
-Degas was the one Impressionist who was successful
-from the beginning and, although he remained rather
-aloof from them, he did exhibit in group shows. Like
-the other Impressionists, he sought to convey a sense of
-movement and spontaneity in his work. In The Dancing
-Class, the girls appear to have been captured unawares
-and their gestures and expressions appear completely
-natural, an effect Degas achieves with his superb drawing
-skills and confident sense of composition. He also employs
-other devices to suggest movement, such as the bright
-red accents in the painting that lead from the girl’s hair
-decoration and the fan in the foreground to the collar of
-the teacher, and then to the sashes of the two dancers
-towards the back of the room.</p>
-                    
-                    
-                    
-                
-        </div>
-        
-    </div>
-    </div>
-
-        <div class="prg2">
-    
-            
-
-        </div>
-
-        <div>
-            <h1>Visual tour</h1>
-        </div>
-
-
-    </div>
-        
-    </div>
-
-    <div class="tour">
-
-
-        <div class="center">
-
-        <div class="content">
-            
-            <img class="tem"  src="The dancing class/another girl wee 2.jpg">
-            <p> 1. BACK VIEW The dancer in the foreground with
-                her back to us enhances the informality of the scene.
-                X-rays of the painting show that she was originally the
-                other way round, looking out of the painting, but Degas
-                changed her position, reinforcing the impression that
-                we are actually in the room with him and the dancers
-                are oblivious to our presence</p>
-        </div>
-        
-        <div class="content2">
-            <img class="tem2"  src="The dancing class/another girl wee.jpg">
-            <p> 2. FRAMED FIGURE Although most of the girls in
-                the painting are relaxing, the dancer framed by the
-                doorway in the center of the painting is being put
-                through her paces by the ballet master. With an
-                expression of concentration on her face, she adopts
-                a classic ballet position</p>
-        </div>
-        
-        <div class="content">
-            <img class="tem3"  src="The dancing class/hiding girl.jpg">
-            <p> 3. CHARMING DETAILS
-                Small areas of activity add
-                to the informality and
-                charm of the painting
-                and bring the whole scene
-                to life. Behind the girl
-                sitting on the piano is
-                a dancer playing with
-                her pearl earring. This
-                intimate detail possibly
-                indicates that her
-                attention has wandered.</p>
-        </div>
-
-        <div class="content2">
-            <img class="tem4"  src="The dancing class/master.jpg">
-            <p> 4. BALLET MASTER As the
-                class comes to an end, Jules
-                Perrot, the ballet master, leans
-                on his wooden stick. He is the
-                principal character in the painting
-                and the focus of the dancers’
-                attention. He appears to be
-                instructing the dancer in the
-                doorway. Jules Perrot was
-                himself a famous dancer and
-                is wearing ballet slippers</p>
-        </div>
-        
-        <div class="content">
-            <img class="tem5"  src="The dancing class/rubon.jpg">
-            <p> 5. CROPPED EDGES We can see the
-                influence of photography in this painting,
-                particularly in Degas’ use of cropping—
-                cutting off details at the margins. Part of
-                the tutu of the girl sitting on the piano
-                lies outside the frame. This helps to
-                create an air of spontaneity, as if the
-                image has been snapped rather than
-                carefully composed. The right–hand side
-                of the painting is similarly cropped.</p>
-        </div>
-
-        <div class="content2">
-            <img class="tem6"  src="The dancing class/the door.jpg">
-            <p> 6. DOORWAY The view
-                through the door frame
-                draws our gaze beyond
-                the rehearsal space to the
-                next room. A double bass
-                lies next to the doorway,
-                so perhaps there is music
-                playing. The window in
-                the adjoining room is an
-                important source of light
-                in the composition and
-                makes you aware of the
-                world outside</p>
-        </div>
-
-        <div class="content">
-            <img class="tem7"  src="The dancing class/the girl wee.jpg">
-            <p> 5. TAKING A BREAK These ballerinas appear to be relaxing before
-                they perform in front of the ballet master. The three seated girls
-                form a triangle, and this shape is repeated by the ballerina standing
-                just above them with with her hands on her hips This ballerina’s pose
-                echoes that of the dancer with the green sash in the foregroundo</p>
-        </div>
-        
-    </div>
-        
-        </div>
-
-        <div class="main">
-
-            <div class="principal">
-                <div class="firsty">
-
-        <div class="title">
-            <h4>Technique</h4>
-        </div>
-
-        <div class="prg2">
-
-        <p>Turner’s landscapes were influenced by the work
-            of Claude, whose fascination with the qualities of
-            light he shared. Turner painted the sun-drenched
-            clouds in The Fighting Temeraire using a technique
-            he learned from Claude. He applied very thin
-            layers of semi-transparent white and yellow oil
-            paint over the darker blue, orange, and red to
-            give the clouds a translucent appearance.
-            Turner left his works to the British nation on
-            the understanding that some of them be hung
-            next to those of Claude. Dido Building Carthage
-            and Sun Rising Through Vapour are displayed
-            alongside Claude’s Seaport with <span class="highlight">the Embarkation
-                of the Queen of Sheba </span> and <span class="highlight">Landscape
-                    with the Marriage of Isaac and Rebecca.</span> </p>
-
-        </div>
-
-    </div>
-</div>
+   
 </div>
 
-
-
-
-<div class="ftr">
-
-<h1 class="break2"> Socials</h1>
-
-<footer class="foot">
-
-    <div class="container2">
-
-        <a href="#">
-            <div class="scl">
-                    <div><img src="../../icons/icons8-linkedin-50.png"></div>
-                    <div><h4>LINKEDIN</h4></div>
-            </div>
-        </a>
-           
-        <a href="#">
-            <div class="scl">
-                    <div><img src="../../icons/icons8-medium-50.png"></div>
-                    <div><h4>MEDIUM</h4></div>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="scl">
-                    <div><img src="../../icons/icons8-instagram-50.png"></div>
-                    <div><h4>INSTAGRAM</h4></div>
-            </div>
-        </a>
-
-    </div>
-
-    <div class="letter">
-
-        <p>Subscribe To our Newsletter</p>
-    <div class="frm">
-        <div>
-        <form class="subscribe-form" id="form" class="container m-4 pl-4" method="POST" >
-            <input class="input"
-            type="email"
-            placeholder="Your Email"
-            name="Email"required>
-            <button class="button is-primary" type="submit" id="submit-button">Subscribe</button>
+<section class="socials">
+    <h2>Socials</h2>
+    <div class="social-icons">
+        <div class="social-icon">
+            <img src="../../icons/icons8-linkedin-50.png" alt="LinkedIn">
+            <p><a href="#">LINKEDIN</a></p>
         </div>
-        
-        <div class="msg">
-            <div
-                id=""
-                style="
-                width: 70%;
-                height: 20px;
-                display: none;
-                margin: 20px;
-                font-weight: bold;
-                color: green;
-                padding: 8px;
-                background-color: beige;
-                border-radius: 4px;
-                border-color: aquamarine;
-            "
-        ></div>
+        <div class="social-icon">
+            <img src="../../icons/icons8-medium-50.png" alt="Medium">
+            <p><a href="#">MEDIUM</a></p>
+        </div>
+        <div class="social-icon">
+            <img src="../../icons/icons8-instagram-50.png" alt="Instagram">
+            <p><a href="#">INSTAGRAM</a></p>
+        </div>
     </div>
-</div>
+</section>
+
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="subscribe-text">
+            <div class="text-lines">
+                <p class="fl">Subscribe</p>
+                <p>To</p>
+                <p>our</p>
+                <p>Newsletter</p>
+            </div>
+            <div class="vertical-line"></div>
+        </div>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
         </form>
-        
     </div>
+</section>
 
-    <div class="footer-bottom">
-        <p>&copy; 2024 The event. All rights reserved.</p>
-    </div>
-
+<footer class="footer">
+    <p>© 2024 Lectique. All rights reserved.</p>
 </footer>
 
+
 </div>
 
-<script>
-
-    function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
-    
-      window.addEventListener("scroll", reveal);
-    
-    // To check the scroll position on page load
-    
-    reveal();
-
-    window.onscroll = function() {
-   
-   var pos3 = window.pageYOffset;
- 
- 
-   if ( pos3 > 500)
- 
-   {
-     document.getElementById('Top').style.opacity=1;
-   }
-   else {
- 
-     document.getElementById('Top').style.opacity=0;
-   }
- 
- }
-    </script>
 </body>
 </html>
